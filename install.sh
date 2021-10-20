@@ -267,6 +267,7 @@ get_wasmedge_tensorflow_deps() {
 
 install_wasmedge_tensorflow() {
     echo "***Fetching WasmEdge-tensorflow-$VERSION_TF-$RELEASE_PKG"
+    echo "**** https://github.com/second-state/WasmEdge-tensorflow/releases/download/$VERSION_TF/WasmEdge-tensorflow-$VERSION_TF-$RELEASE_PKG"
     _downloader "https://github.com/second-state/WasmEdge-tensorflow/releases/download/$VERSION_TF/WasmEdge-tensorflow-$VERSION_TF-$RELEASE_PKG"
 
     echo "Fetching WasmEdge-tensorflowlite-$VERSION_TF"
