@@ -75,7 +75,6 @@ get_latest_release() {
     local res
     res=$(git ls-remote --refs --tags "https://github.com/$1.git" |
         cut -d '/' -f 3 |
-        tr '-' '~' |
         sort --version-sort |
         tail -1)
     echo "$res"
