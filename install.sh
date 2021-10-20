@@ -293,9 +293,9 @@ install() {
 
 get_wasmedge_release() {
     echo "Fetching WasmEdge-$1"
-    echo "__________________https://github.com/WasmEdge/WasmEdge/releases/download/$one/WasmEdge-$one-$two"
-    _downloader "https://github.com/WasmEdge/WasmEdge/releases/download/$one/WasmEdge-$one-$two"
-    _extracter -C "$three" -vxzf "$TMP_DIR/WasmEdge-$one-$two"
+    echo "__--__https://github.com/WasmEdge/WasmEdge/releases/download/$1/WasmEdge-$1-$2"
+    _downloader "https://github.com/WasmEdge/WasmEdge/releases/download/$1/WasmEdge-$1-$2"
+    _extracter -C "$3" -vxzf "$3/WasmEdge-$1-$2"
 }
 
 wasmedge_post_install() {
