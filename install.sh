@@ -97,6 +97,7 @@ get_latest_release() {
 }
 
 VERSION=$(get_latest_release WasmEdge/WasmEdge)
+echo "******************************$VERSION"
 VERSION_IM=$(get_latest_release second-state/WasmEdge-image)
 VERSION_IM_DEPS=$(get_latest_release second-state/WasmEdge-image)
 VERSION_TF=$(get_latest_release second-state/WasmEdge-tensorflow)
