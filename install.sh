@@ -292,10 +292,13 @@ install() {
 }
 
 get_wasmedge_release() {
-    echo "Fetching WasmEdge-$1"
-    echo "***_***https://github.com/WasmEdge/WasmEdge/releases/download/$1/WasmEdge-$1-$2"
-    _downloader "https://github.com/WasmEdge/WasmEdge/releases/download/$1/WasmEdge-$1-$2"
-    _extracter -C "$3" -vxzf "$TMP_DIR/WasmEdge-$1-$2"
+    local one=$1
+    local two=$2
+    local three=$3
+    echo "Fetching WasmEdge-$one"
+    echo "***_***https://github.com/WasmEdge/WasmEdge/releases/download/$one/WasmEdge-$one-$two"
+    _downloader "https://github.com/WasmEdge/WasmEdge/releases/download/$one/WasmEdge-$one-$two"
+    _extracter -C "$three" -vxzf "$TMP_DIR/WasmEdge-$one-$two"
 }
 
 wasmedge_post_install() {
