@@ -543,7 +543,7 @@ main() {
         echo "WasmEdge Installation at $IPATH"
         make_dirs "include" "lib" "bin"
 
-        get_wasmedge_release
+        get_wasmedge_release "$VERSION" "$RELEASE_PKG" "$TMP_DIR"
         install "$IPKG" "include" "lib" "bin"
         wasmedge_post_install "$VERSION"
         wasmedge_checks "$VERSION" "wasmedge" "wasmedgec"
