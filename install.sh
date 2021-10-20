@@ -292,10 +292,7 @@ install() {
 }
 
 get_wasmedge_release() {
-    local one=$1
-    local two=$2
-    local three=$3
-    echo "Fetching WasmEdge-$one"
+    echo "Fetching WasmEdge-$1"
     echo "__________________https://github.com/WasmEdge/WasmEdge/releases/download/$one/WasmEdge-$one-$two"
     _downloader "https://github.com/WasmEdge/WasmEdge/releases/download/$one/WasmEdge-$one-$two"
     _extracter -C "$three" -vxzf "$TMP_DIR/WasmEdge-$one-$two"
