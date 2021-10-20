@@ -105,6 +105,7 @@ VERSION_TF_DEPS=$(get_latest_release second-state/WasmEdge-tensorflow-deps)
 VERSION_TF_TOOLS=$(get_latest_release second-state/WasmEdge-tensorflow-tools)
 
 detect_os_arch() {
+    VERSION=$(get_latest_release WasmEdge/WasmEdge)
     RELEASE_PKG="manylinux2014_x86_64.tar.gz"
     IM_DEPS_RELEASE_PKG="manylinux1_x86_64.tar.gz"
     ARCH=$(uname -m)
