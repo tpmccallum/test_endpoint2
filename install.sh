@@ -295,7 +295,8 @@ get_wasmedge_release() {
     echo "WasmEdge $1"
     echo "release $2"
     echo "tmp $3"
-    echo "__--__https://github.com/WasmEdge/WasmEdge/releases/download/$1/WasmEdge-$1-$2"
+    echo "IPKG $4"
+    echo "++++++++https://github.com/WasmEdge/WasmEdge/releases/download/$1/WasmEdge-$1-$2"
     _downloader "https://github.com/WasmEdge/WasmEdge/releases/download/$1/WasmEdge-$1-$2"
     _extracter -C "$3" -vxzf "$3/WasmEdge-$1-$2"
 }
@@ -545,7 +546,7 @@ main() {
         echo "WasmEdge Installation at $IPATH"
         make_dirs "include" "lib" "bin"
 
-        get_wasmedge_release "$VERSION" "$RELEASE_PKG" "$TMP_DIR"
+        get_wasmedge_release "$VERSION" "$RELEASE_PKG" "$TMP_DIR" "$IPKG"
         install "$IPKG" "include" "lib" "bin"
         wasmedge_post_install "$VERSION"
         wasmedge_checks "$VERSION" "wasmedge" "wasmedgec"
